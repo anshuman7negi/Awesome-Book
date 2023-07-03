@@ -30,10 +30,10 @@ document.getElementById('addBook').addEventListener('click', () => {
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
 });
-
+/* eslint-disable no-unused-vars */
 function removeBook(index) {
   bookDetails.splice(index, 1);
   storeData();
 }
-
+/* eslint-enable no-unused-vars */
 reciveData();
