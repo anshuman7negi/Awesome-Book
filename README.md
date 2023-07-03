@@ -62,7 +62,7 @@ A Awesome Book  is a live book store where anyone can add and remove the books.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-1. Go to this URL link: https://github.com/anshuman7negi/ConcertPage
+1. Go to this URL link: https://github.com/anshuman7negi/Awesome-Book.git
 2. clone the repo and start working on it.
 
 ### Prerequisites
@@ -78,8 +78,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-git clone your link repo https://github.com/anshuman7negi/ConcertPage.git
-
+git clone your link repo https://github.com/anshuman7negi/Awesome-Book.git
 cd your folder name
 ```
 
