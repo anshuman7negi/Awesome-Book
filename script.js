@@ -1,6 +1,21 @@
 let bookDetails = [];
 
-
+function reciveData() {
+  const reciveBooks = localStorage.getItem('booksData');
+  if (reciveBooks) {
+    bookDetails = JSON.parse(reciveBooks);
+    const bookStore = document.getElementById('allBooks');
+    bookStore.innerHTML = '';
+    for (let i = 0; i < bookDetails.length; i += 1) {
+      bookStore.innerHTML += `<div id="book${i}" class="book-store">
+                                     <p>${bookDetails[i].book}</p>
+                                     <p>${bookDetails[i].author}</p>
+                                     <button  class="remove-button">remove</button>
+                                     <hr>
+                                     </div>`;
+    }
+  }
+}
 function storeData() {
   localStorage.setItem('booksData', JSON.stringify(bookDetails));
   reciveData();
