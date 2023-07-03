@@ -1,17 +1,16 @@
-const bookDetails =[];
+let bookDetails =[];
 
 function reciveData() {
     const reciveBooks=localStorage.getItem('booksData');
     if(reciveBooks) {
-        const books=JSON.parse(reciveBooks);
-        console.log(books.length)
-        console.log(books);
+         bookDetails=JSON.parse(reciveBooks);
         const bookStore=document.getElementById('allBooks');
-        for(let i = 0;i < books.length; i++) {
+        bookStore.innerHTML = ''; 
+        for(let i = 0;i < bookDetails.length; i++) {
             bookStore.innerHTML += `<div id="book${i}" class="book-store">
-                                     <p>${books[i].book}</p>
-                                     <p>${books[i].author}</p>
-                                     <button onclick="removeBook("${i}")">remove</button>
+                                     <p>${bookDetails[i].book}</p>
+                                     <p>${bookDetails[i].author}</p>
+                                     <button onclick="removeBook(${i})">remove</button>
                                      <hr>
                                      </div>`
         }
@@ -28,7 +27,14 @@ document.getElementById('addBook').addEventListener('click', ()=> {
     const author=document.getElementById('author').value;
     bookDetails.push({book:book,author:author});
     storeData();
+    document.getElementById('title').value='';
+    document.getElementById('author').value='';
 });
 
+function removeBook(index) {
+    console.log("helow");
+    bookDetails.splice(index, 1); // Remove the book from the array
+    storeData();
+}
 
 reciveData();
