@@ -25,7 +25,7 @@ function storeData() {
 document.getElementById('addBook').addEventListener('click', () => {
   const book = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  if(book != "" && author != "") {
+  if (book !== '' && author !== '') {
     bookDetails.push({ book, author });
     storeData();
     document.getElementById('title').value = '';
