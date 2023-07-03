@@ -10,7 +10,7 @@ function reciveData() {
       bookStore.innerHTML += `<div id="book${i}" class="book-store">
                                      <p>${bookDetails[i].book}</p>
                                      <p>${bookDetails[i].author}</p>
-                                     <button onclick="removeBook(${i})">remove</button>
+                                     <button  class="remove-button">remove</button>
                                      <hr>
                                      </div>`;
     }
@@ -20,6 +20,11 @@ function reciveData() {
 function storeData() {
   localStorage.setItem('booksData', JSON.stringify(bookDetails));
   reciveData();
+}
+
+function removeBook(index) {
+  bookDetails.splice(index, 1);
+  storeData();
 }
 
 document.getElementById('addBook').addEventListener('click', () => {
@@ -32,10 +37,13 @@ document.getElementById('addBook').addEventListener('click', () => {
     document.getElementById('author').value = '';
   }
 });
-/* eslint-disable no-unused-vars */
-function removeBook(index) {
-  bookDetails.splice(index, 1);
-  storeData();
-}
-/* eslint-enable no-unused-vars */
+
+document.getElementById('allBooks').addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-button')) {
+    const bookDiv = event.target.parentNode;
+    const index = Array.from(bookDiv.parentNode.children).indexOf(bookDiv);
+    removeBook(index);
+  }
+});
+
 reciveData();
