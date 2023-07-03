@@ -1,40 +1,39 @@
-let bookDetails =[];
+let bookDetails = [];
 
 function reciveData() {
-    const reciveBooks=localStorage.getItem('booksData');
-    if(reciveBooks) {
-         bookDetails=JSON.parse(reciveBooks);
-        const bookStore=document.getElementById('allBooks');
-        bookStore.innerHTML = ''; 
-        for(let i = 0;i < bookDetails.length; i++) {
-            bookStore.innerHTML += `<div id="book${i}" class="book-store">
+  const reciveBooks = localStorage.getItem('booksData');
+  if (reciveBooks) {
+    bookDetails = JSON.parse(reciveBooks);
+    const bookStore = document.getElementById('allBooks');
+    bookStore.innerHTML = '';
+    for (let i = 0; i < bookDetails.length; i += 1) {
+      bookStore.innerHTML += `<div id="book${i}" class="book-store">
                                      <p>${bookDetails[i].book}</p>
                                      <p>${bookDetails[i].author}</p>
                                      <button onclick="removeBook(${i})">remove</button>
                                      <hr>
-                                     </div>`
-        }
+                                     </div>`;
     }
+  }
 }
 
 function storeData() {
-   localStorage.setItem('booksData', JSON.stringify(bookDetails));
-   reciveData();
+  localStorage.setItem('booksData', JSON.stringify(bookDetails));
+  reciveData();
 }
 
-document.getElementById('addBook').addEventListener('click', ()=> {
-    const book=document.getElementById('title').value;
-    const author=document.getElementById('author').value;
-    bookDetails.push({book:book,author:author});
-    storeData();
-    document.getElementById('title').value='';
-    document.getElementById('author').value='';
+document.getElementById('addBook').addEventListener('click', () => {
+  const book = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  bookDetails.push({ book, author });
+  storeData();
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
 });
 
 function removeBook(index) {
-    console.log("helow");
-    bookDetails.splice(index, 1); // Remove the book from the array
-    storeData();
+  bookDetails.splice(index, 1);
+  storeData();
 }
 
 reciveData();
