@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Books</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     <main>
-        <h1>Awesome books</h1>
-        <p>Lorem ipsum</p>
-        <p>Testeroo Testty</p>
-        <button>Remove</button><br>
-
-        <input type="text" placeholder="Title"><br>
-        <input type="text" placeholder="Author"><br>
-        <button>Add</button>
+      <h1>Awesome books</h1>
+      <div id="allBooks">
+      </div>
+      <div class="addBook">
+        <input id="title" type="text" placeholder="Title" required /><br />
+        <input id="author" type="text" placeholder="Author" required /><br />
+        <button id="addBook">Add</button>
+      </div>
     </main>
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
