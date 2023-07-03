@@ -25,10 +25,12 @@ function storeData() {
 document.getElementById('addBook').addEventListener('click', () => {
   const book = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  bookDetails.push({ book, author });
-  storeData();
-  document.getElementById('title').value = '';
-  document.getElementById('author').value = '';
+  if(book != "" && author != "") {
+    bookDetails.push({ book, author });
+    storeData();
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+  }
 });
 /* eslint-disable no-unused-vars */
 function removeBook(index) {
