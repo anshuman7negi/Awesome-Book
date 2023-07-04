@@ -6,7 +6,7 @@ class AllBooks {
 
   displayBooks() {
     const reciveBooks = localStorage.getItem('booksData');
-    if (reciveBooks && JSON.parse(reciveBooks).length>0) {
+    if (reciveBooks && JSON.parse(reciveBooks).length > 0) {
       this.bookDetails = JSON.parse(reciveBooks);
       const bookStore = document.getElementById('allBooks');
       bookStore.innerHTML = '';
@@ -27,12 +27,11 @@ class AllBooks {
         });
       }
 
-      document.getElementById('book-title').style.display='block';
-      document.getElementById('tableBook').style.display='flex';
-    }
-    else {
-      document.getElementById('book-title').style.display='';
-      document.getElementById('tableBook').style.display='';
+      document.getElementById('book-title').style.display = 'block';
+      document.getElementById('tableBook').style.display = 'flex';
+    } else {
+      document.getElementById('book-title').style.display = '';
+      document.getElementById('tableBook').style.display = '';
     }
   }
 
