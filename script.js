@@ -61,24 +61,23 @@ document.getElementById('addBook').addEventListener('click', () => {
   }
 });
 
-
-document.getElementById('list').addEventListener('click',()=> {
-   mybooks.displayBooks();
-   document.getElementById('book-title').style.display='block'
-   document.getElementById('book-form').style.display='none';
-   document.getElementById('contact').style.display='none';
+document.getElementById('list').addEventListener('click', () => {
+  mybooks.displayBooks();
+  document.getElementById('book-title').style.display = 'block';
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
 });
 
 document.getElementById('newBook').addEventListener('click', () => {
-  document.getElementById('book-form').style.display='';
-  document.getElementById('tableBook').style.display='none'
-  document.getElementById('book-title').style.display='none'
-  document.getElementById('contact').style.display='none';
+  document.getElementById('book-form').style.display = '';
+  document.getElementById('tableBook').style.display = 'none';
+  document.getElementById('book-title').style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
 });
 
 document.getElementById('contact-link').addEventListener('click', () => {
-  document.getElementById('contact').style.display='block';
-  document.getElementById('book-form').style.display='none';
-  document.getElementById('tableBook').style.display='none'
-  document.getElementById('book-title').style.display='none'
-})
+  document.getElementById('contact').style.display = 'block';
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('tableBook').style.display = 'none';
+  document.getElementById('book-title').style.display = 'none';
+});
