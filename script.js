@@ -6,18 +6,33 @@ class AllBooks {
 
   displayBooks() {
     const reciveBooks = localStorage.getItem('booksData');
-    if (reciveBooks) {
+    if (reciveBooks && JSON.parse(reciveBooks).length>0) {
       this.bookDetails = JSON.parse(reciveBooks);
       const bookStore = document.getElementById('allBooks');
       bookStore.innerHTML = '';
       for (let i = 0; i < this.bookDetails.length; i += 1) {
-        bookStore.innerHTML += `<tbody id="book${i}" class="book-store">
-                                       <tr> 
+        bookStore.innerHTML += ` <tr id="book${i}" class="book-store"> 
                                        <td> ${this.bookDetails[i].title} by ${this.bookDetails[i].author} </td>
                                        <td> <button  class="remove-button">Remove</button> </td>
-                                       </tr>
-                                </tbody>`;
+                                  </tr>`;
       }
+      const deleteRow = document.querySelectorAll('.book-store');
+      const removeBtn = document.querySelectorAll('.remove-button');
+
+      for (let i = 0; i < removeBtn.length; i += 1) {
+        removeBtn[i].addEventListener('click', () => {
+          deleteRow[i].remove();
+          this.removeBook(i);
+          this.displayBooks();
+        });
+      }
+
+      document.getElementById('book-title').style.display='block';
+      document.getElementById('tableBook').style.display='flex';
+    }
+    else {
+      document.getElementById('book-title').style.display='';
+      document.getElementById('tableBook').style.display='';
     }
   }
 
@@ -45,14 +60,6 @@ document.getElementById('addBook').addEventListener('click', () => {
     mybooks.addBook(title, author);
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
-  }
-});
-
-document.getElementById('allBooks').addEventListener('click', (event) => {
-  if (event.target.classList.contains('remove-button')) {
-    const bookDiv = event.target.parentNode;
-    const index = Array.from(bookDiv.parentNode.children).indexOf(bookDiv);
-    mybooks.removeBook(index);
   }
 });
 

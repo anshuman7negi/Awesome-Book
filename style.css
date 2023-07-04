@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,400;1,100;1,200&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Caprasimo', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -11,31 +16,73 @@ main {
   height: 100vh;
 }
 
+h1 {
+  display: none;
+  font-weight: 600;
+}
+
+h3 {
+  align-self: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+
 #allBooks {
-  border: 2px solid #111111;
-  margin-top: 30px;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .book-store {
   display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 button {
   padding: 4px;
   align-self: flex-end;
-  border: 2px solid #111111;
+  border: 2px solid #111;
+  background-color: #fff;
+  box-shadow: 4px 3px 1px 0 rgb(23, 22, 22);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+button:hover {
+  box-shadow: 4px 3px 1px 0 red;
+}
+
+#addBook {
+  width: 30%;
+}
+
+#addBook:hover {
+  box-shadow: 4px 3px 1px 0 rgb(53, 222, 37);
 }
 
 .addBook {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  width: 30%;
 }
 
 input {
- margin-top: 10px;
+ border: 2px solid black;
+ padding: 5px;
+}
+
+table {
+  display: none;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 60%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: red;
 }
