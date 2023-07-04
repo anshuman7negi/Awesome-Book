@@ -33,6 +33,36 @@ nav ul {
   gap: 30px;
 }
 
+#list {
+  position: relative;
+}
+
+#newBook {
+  position: relative;
+}
+
+#newBook::after {
+  content: '';
+  position: absolute;
+  transform: rotate(90deg);
+  background-color: black;
+  width: 3rem;
+  height: 2px;
+  left: 100px;
+  top: 10px;
+}
+
+#list::after {
+    content: '';
+    position: absolute;
+    transform: rotate(90deg);
+    background-color: black;
+    width: 3rem;
+    height: 2px;
+    left: 35px;
+    top: 10px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -110,4 +140,8 @@ table {
 
 tbody tr:nth-child(odd) {
   background-color: red;
+}
+
+#contact {
+  display: none;
 }
