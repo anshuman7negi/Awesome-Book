@@ -4,22 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <header>
+      <p>Awesome Books</p>
+      <nav>
+        <ul>
+          <li>List</li>
+          <li>Add new</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <h1 id="book-title">All awesome books</h1>
 
-      <table id="tableBook" >
+      <table id="tableBook">
         <tbody id="allBooks"></tbody>
       </table>
       <form class="addBook">
         <h3>Add a new book</h3>
         <input id="title" type="text" placeholder="Title" required /><br />
         <input id="author" type="text" placeholder="Author" required /><br />
-        <button  id="addBook">Add</button>
+        <button id="addBook">Add</button>
       </form>
     </main>
+
+    <footer>
+      <p>Copyright  ...</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

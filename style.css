@@ -6,12 +6,39 @@
   font-family: 'Fuzzy Bubbles', cursive;
 }
 
+body {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 4px solid black;
+  font-size: 25px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 4px solid black;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
 }
 
 h1 {
@@ -42,7 +69,7 @@ h3 {
 button {
   padding: 4px;
   align-self: flex-end;
-  border: 2px solid #111;
+  border: 4px solid #111;
   background-color: #fff;
   box-shadow: 4px 3px 1px 0 rgb(23, 22, 22);
   font-size: 15px;
@@ -69,7 +96,7 @@ button:hover {
 }
 
 input {
-  border: 2px solid black;
+  border: 4px solid black;
   padding: 5px;
 }
 
