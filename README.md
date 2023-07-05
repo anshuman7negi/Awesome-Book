@@ -118,6 +118,12 @@ Deploy this project on any web server
 - Twitter: [@twitterhandle](https://twitter.com/AnshumanNegi108)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/anshuman-singh-negi-33779a224/)
 
+
+👤 **Maris Kapuka **
+
+- GitHub: [@githubhandle](https://github.com/riskmaris)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/riskmaris)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
