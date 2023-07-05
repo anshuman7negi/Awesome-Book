@@ -83,10 +83,10 @@ document.getElementById('contact-link').addEventListener('click', () => {
 });
 
 function updateTime() {
-  let currentDate= new Date();
-  let dateTimeString = currentDate.toLocaleString();
+  const currentDate = new Date();
+  const dateTimeString = currentDate.toLocaleString();
   document.getElementById('time').textContent = dateTimeString;
 }
 
 updateTime();
-setInterval(updateTime,1000);
+setInterval(updateTime, 1000);
