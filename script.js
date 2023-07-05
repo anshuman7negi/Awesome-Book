@@ -75,5 +75,18 @@ document.getElementById('newBook').addEventListener('click', () => {
   document.getElementById('contact').style.display = 'none';
 });
 
+document.getElementById('contact-link').addEventListener('click', () => {
+  document.getElementById('contact').style.display = 'flex';
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('tableBook').style.display = 'none';
+  document.getElementById('book-title').style.display = 'none';
+});
 
+function updateTime() {
+  const currentDate = new Date();
+  const dateTimeString = currentDate.toLocaleString();
+  document.getElementById('time').textContent = dateTimeString;
+}
 
+updateTime();
+setInterval(updateTime, 1000);
