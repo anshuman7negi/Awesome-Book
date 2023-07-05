@@ -29,7 +29,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Portfolio <a name="about-project"></a>
+# 📖 Awesome Books <a name="about-project"></a>
 
 A Awesome Book  is a live book store where anyone can add and remove the books.
 
@@ -117,6 +117,12 @@ Deploy this project on any web server
 - GitHub: [@githubhandle](https://github.com/anshuman7negi)
 - Twitter: [@twitterhandle](https://twitter.com/AnshumanNegi108)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/anshuman-singh-negi-33779a224/)
+
+
+👤 **Maris Kapuka **
+
+- GitHub: [@githubhandle](https://github.com/riskmaris)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/riskmaris)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
