@@ -165,7 +165,7 @@ tbody tr:nth-child(odd) {
 .date {
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 21px;
 }
 
 @media screen and (width < 409px) {
