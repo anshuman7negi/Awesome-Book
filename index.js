@@ -1,13 +1,14 @@
-import AllBooks from "./modules/bookClass.js";
-import {booktitle,bookform,contact,tableBook,title,author,contactLink,list,newBook} from "./modules/variable.js"
-import displayClock from "./modules/clock.js"
+import all-book from './modules/bookClass.js';
+import {
+  booktitle, bookform, contact, tableBook, title, author, contactLink, list, new-book,
+} from './modules/variable.js';
+import displayClock from './modules/clock.js';
 
-const mybooks = new AllBooks();
+const mybooks = new all-book();
 
-document.getElementById('addBook').addEventListener('click', () => {
- 
+document.getElementById('add-book').addEventListener('click', () => {
   if (title.value !== '' && author.value !== '') {
-    mybooks.addBook(title.value, author.value);
+    mybooks.add-book(title.value, author.value);
     title.value = '';
     author.value = '';
   }
@@ -20,7 +21,7 @@ list.addEventListener('click', () => {
   contact.style.display = 'none';
 });
 
-newBook.addEventListener('click', () => {
+new-book.addEventListener('click', () => {
   bookform.style.display = '';
   tableBook.style.display = 'none';
   booktitle.style.display = 'none';
@@ -34,5 +35,4 @@ contactLink.addEventListener('click', () => {
   booktitle.style.display = 'none';
 });
 
-setInterval(displayClock,1000);
-
+setInterval(displayClock, 1000);

@@ -1,11 +1,11 @@
-export  const bookStore = document.getElementById('allBooks');
-export const booktitle =  document.getElementById('book-title');
+export const bookStore = document.getElementById('all-book');
+export const booktitle = document.getElementById('book-title');
 export const tableBook = document.getElementById('tableBook');
 export const title = document.getElementById('title');
 export const author = document.getElementById('author');
 export const bookform = document.getElementById('book-form');
 export const contact = document.getElementById('contact');
 export const list = document.getElementById('list');
-export const newBook = document.getElementById('newBook');
+export const new-book = document.getElementById('new-book');
 export const contactLink = document.getElementById('contact-link');
 export const time = document.getElementById('time');
