@@ -1,0 +1,35 @@
+import AllBooks from "./modules/bookClass.js";
+import {booktitle,bookform,contact,tableBook,title,author,contactLink,list,newBook} from "./modules/variable.js"
+
+const mybooks = new AllBooks();
+
+document.getElementById('addBook').addEventListener('click', () => {
+ 
+  if (title.value !== '' && author.value !== '') {
+    mybooks.addBook(title.value, author.value);
+    title.value = '';
+    author.value = '';
+  }
+});
+
+list.addEventListener('click', () => {
+  mybooks.displayBooks();
+  booktitle.style.display = 'block';
+  bookform.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+newBook.addEventListener('click', () => {
+  bookform.style.display = '';
+  tableBook.style.display = 'none';
+  booktitle.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+contactLink.addEventListener('click', () => {
+  contact.style.display = 'flex';
+  bookform.style.display = 'none';
+  tableBook.style.display = 'none';
+  booktitle.style.display = 'none';
+});
+
