@@ -1,3 +1,4 @@
+import { bookStore,booktitle,tableBook } from "./variable.js";
 export default class AllBooks {
     constructor() {
       const previousData = localStorage.getItem('booksData');
@@ -8,7 +9,6 @@ export default class AllBooks {
       const reciveBooks = localStorage.getItem('booksData');
       if (reciveBooks && JSON.parse(reciveBooks).length > 0) {
         this.bookDetails = JSON.parse(reciveBooks);
-        const bookStore = document.getElementById('allBooks');
         bookStore.innerHTML = '';
         for (let i = 0; i < this.bookDetails.length; i += 1) {
           bookStore.innerHTML += ` <tr id="book${i}" class="book-store"> 
@@ -16,8 +16,8 @@ export default class AllBooks {
                                          <td> <button  class="remove-button">Remove</button> </td>
                                     </tr>`;
         }
-        const deleteRow = document.querySelectorAll('.book-store');
-        const removeBtn = document.querySelectorAll('.remove-button');
+       const deleteRow = document.querySelectorAll('.book-store'); 
+       const removeBtn = document.querySelectorAll('.remove-button');
   
         for (let i = 0; i < removeBtn.length; i += 1) {
           removeBtn[i].addEventListener('click', () => {
@@ -27,11 +27,11 @@ export default class AllBooks {
           });
         }
   
-        document.getElementById('book-title').style.display = 'block';
-        document.getElementById('tableBook').style.display = 'flex';
+        booktitle.style.display = 'block';
+        tableBook.style.display = 'flex';
       } else {
-        document.getElementById('book-title').style.display = '';
-        document.getElementById('tableBook').style.display = '';
+        booktitle.style.display = '';
+        tableBook.style.display = '';
       }
     }
   

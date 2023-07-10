@@ -1,6 +1,4 @@
 export  const bookStore = document.getElementById('allBooks');
-export const deleteRow = document.querySelectorAll('.book-store'); 
-export const removeBtn = document.querySelectorAll('.remove-button');
 export const booktitle =  document.getElementById('book-title');
 export const tableBook = document.getElementById('tableBook');
 export const title = document.getElementById('title');
