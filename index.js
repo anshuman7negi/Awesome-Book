@@ -1,5 +1,6 @@
 import AllBooks from "./modules/bookClass.js";
 import {booktitle,bookform,contact,tableBook,title,author,contactLink,list,newBook} from "./modules/variable.js"
+import displayClock from "./modules/clock.js"
 
 const mybooks = new AllBooks();
 
@@ -32,4 +33,6 @@ contactLink.addEventListener('click', () => {
   tableBook.style.display = 'none';
   booktitle.style.display = 'none';
 });
+
+setInterval(displayClock,1000);
 

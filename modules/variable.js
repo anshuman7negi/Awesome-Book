@@ -8,3 +8,4 @@ export const contact = document.getElementById('contact');
 export const list = document.getElementById('list');
 export const newBook = document.getElementById('newBook');
 export const contactLink = document.getElementById('contact-link');
+export const time = document.getElementById('time');
